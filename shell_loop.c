@@ -119,7 +119,6 @@ void find_cmd(info_t *info)
 /**
  * fork_cmd - splits executed thread to perform cmd
  * @info: parameter and replaces information structure
- *
  * Return: null
  */
 void fork_cmd(info_t *info)
