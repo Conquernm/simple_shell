@@ -30,7 +30,7 @@ char *get_history_file(info_t *info)
  */
 int write_history(info_t *info)
 {
-	ssize_t mh;
+	ssize_t fd;
 	char *filename = get_history_file(info);
 	list_t *node = NULL;
 
@@ -39,15 +39,15 @@ int write_history(info_t *info)
 
 	fd = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);
 	free(filename);
-	if (mh == -1)
+	if (fd == -1)
 		return (-1);
 	for (node = info->history; node; node = node->next)
 	{
-		_putsmh(node->str, mh);
-		_putmh('\n', mh);
+		_putsfd(node->str, fd);
+		_putfd('\n', fd);
 	}
-	_putmh(BUF_FLUSH, mh);
-	close(mh);
+	_putmfd(BUF_FLUSH, fd);
+	close(fd);
 	return (1);
 }
 
