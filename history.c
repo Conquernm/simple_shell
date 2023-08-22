@@ -44,9 +44,15 @@ int write_history(info_t *info)
 	for (node = info->history; node; node = node->next)
 	{
 		_putsfd(node->str, fd);
+<<<<<<< HEAD
 		_putsfd('\n', fd);
 	}
 	_putsfd(BUF_FLUSH, fd);
+=======
+		_putfd('\n', fd);
+	}
+	_putmfd(BUF_FLUSH, fd);
+>>>>>>> ed45735467425ba799fc638f4b6d21a054ce2568
 	close(fd);
 	return (1);
 }

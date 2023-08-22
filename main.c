@@ -41,4 +41,3 @@ int main(int ac, char **av)
 	hsh(info, av);
 	return (EXIT_SUCCESS);
 }
-

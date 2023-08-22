@@ -25,7 +25,11 @@ return (dest);
  * _strdup - copies a string
  * @str: string to copies
  * Return: pointer to the copied string
+<<<<<<< HEAD
  */
+=======
+*/
+>>>>>>> ed45735467425ba799fc638f4b6d21a054ce2568
 char *_strdup(const char *str)
 {
 int length = 0;
@@ -47,7 +51,11 @@ return (ret);
  * _puts - prints an input string
  * @str: string to be printed
  * Return: 0
+<<<<<<< HEAD
  */
+=======
+*/
+>>>>>>> ed45735467425ba799fc638f4b6d21a054ce2568
 void _puts(char *str)
 {
 int a = 0;
@@ -66,7 +74,11 @@ a++;
  * @c: character to print
  * Return: On success 1
  * On error, -1 is replaced, and errno is placed suitably.
+<<<<<<< HEAD
  */
+=======
+*/
+>>>>>>> ed45735467425ba799fc638f4b6d21a054ce2568
 int _putchar(char c)
 {
 static int a;
